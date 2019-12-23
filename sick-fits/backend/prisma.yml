@@ -1,0 +1,2 @@
+endpoint: https://eu1.prisma.sh/vitnija-bluzma/sick-fits/dev
+datamodel: datamodel.prisma
