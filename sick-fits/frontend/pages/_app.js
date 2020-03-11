@@ -5,7 +5,6 @@ import withData from '../lib/withData'
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
-    // special next.js query, will always run before render, the return is exposed via component props
     let pageProps = {}
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
@@ -14,7 +13,6 @@ class MyApp extends App {
     pageProps.query = ctx.query
     return { pageProps }
   }
-
   render() {
     const { Component, apollo, pageProps } = this.props
 
